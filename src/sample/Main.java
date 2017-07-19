@@ -10,20 +10,22 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
+/**
+ * Shows a JavaFX Application with labels and corresponding text fields with a calculate button
+ */
+
 public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage.setTitle("Hello World");
+        primaryStage.setTitle("Loan Calculator");
 
         GridPane rootNode = new GridPane();
         rootNode.setHgap(5);
         rootNode.setVgap(5);
         rootNode.setPadding(new Insets(30));
 
-        //primaryStage.setScene(new Scene(root, 300, 275));
-
-        primaryStage.setScene(new Scene(rootNode, 350, 275));
+        primaryStage.setScene(new Scene(rootNode, 400, 275));
         rootNode.add(new Label("Annual Interest Rate:"), 0,0);
         rootNode.add(new TextField(), 1,0);
 
